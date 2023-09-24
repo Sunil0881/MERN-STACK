@@ -5,7 +5,7 @@ const Workout = require('../models/workoutModel')
 const getWorkouts = async (req, res) => {
     const workouts = await Workout.find({}).sort({createdAt: -1})
 
-    res.status(200).json(workout)
+    res.status(200).json(workouts)
 }
 
 
@@ -23,7 +23,7 @@ const getWorkout = async (req, res) => {
        return res.status(404).json({error: 'no such workout'})
     }   
 
-    res.status(200).json(workout)
+    res.status(200).json(workouts)
     
 }    
 
@@ -34,7 +34,7 @@ const createWorkout = async (req, res) => {
 
     try {
         const workout = await Workout.create({title, load, reps})
-        res.status(200).json(workout)
+        res.status(200).json(workouts)
     } catch (error) {
         res.status(400).json({error:error.message})
     }
@@ -55,7 +55,7 @@ const deleteWorkout = async (req, res) => {
        return res.status(404).json({error: 'no such workout'})
     }   
 
-    res.status(200).json(workout)
+    res.status(200).json(workouts)
     
 }    
 
@@ -75,7 +75,7 @@ const updateWorkout = async (req, res) => {
        return res.status(404).json({error: 'no such workout'})
     }   
 
-    res.status(200).json(workout)
+    res.status(200).json(workouts)
     
 }    
 
