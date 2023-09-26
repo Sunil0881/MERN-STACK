@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+
 const workoutsRoutes = require('./routes/workouts')
 const MONGO_url = 'mongodb+srv://sunil_0881:P3CnbfY414hjmkbM@cluster0.fsdthfp.mongodb.net/mern'
 
@@ -15,9 +16,11 @@ app.use((req, res, next) => {
 })
 
 //routes
+
 app.use('/api/workouts', workoutsRoutes)
 
 //connect to DB
+
 mongoose.connect(MONGO_url)
     .then(() => {
         app.listen (5000, () => {

@@ -8,7 +8,7 @@ const workoutSchema = new Schema({
         require:true
     },
     reps: {
-        type:String,
+        type: Number,
         require:true
     },
     load: {

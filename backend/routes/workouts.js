@@ -1,6 +1,6 @@
 const express = require('express')
 
-const workouts = require("../models/workoutModel")
+
 const {createWorkout,
        getWorkout,
        getWorkouts, 
