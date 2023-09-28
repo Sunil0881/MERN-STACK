@@ -44,21 +44,21 @@ const WorkoutForm = () => {
       <input 
         type="text" 
         onChange={(e) => setTitle(e.target.value)} 
-        value={title}
+        value={title} required
       />
 
       <label>Load (in kg):</label>
       <input 
         type="number" 
         onChange={(e) => setLoad(e.target.value)} 
-        value={load}
+        value={load} required
       />
 
       <label>Number of Reps:</label>
       <input 
         type="number" 
         onChange={(e) => setReps(e.target.value)} 
-        value={reps} 
+        value={reps}  required
       />
 
       <button>Add Workout</button>
